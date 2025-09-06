@@ -4,7 +4,6 @@ import cors from 'cors'
 import startServer from './db.js';
 
 
-
 dotenv.config(); 
 
 
