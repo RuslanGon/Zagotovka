@@ -15,6 +15,6 @@ app.use(express.json());
 app.post("/auth/register", register);
 app.post("/auth/login", login);
 app.get("/auth/me", checkAuth, getMe);
-app.get("/auth/getAll", getAll);
+app.get("/auth/getAll",checkAuth, getAll);
 
 startServer(app);
