@@ -110,4 +110,20 @@ export const register = async (req, res) => {
       res.status(500).json({ message: "Нет доступа" });
     }
   };
+
+//   getAll
+export const getAll = async (req, res) => {
+    try {
+      const users = await User.find().select("-password"); // исключаем пароль из ответа
+      res.json({
+        success: true,
+        users,
+      });
+    } catch (error) {
+      res.status(500).json({
+        success: false,
+        message: "Ошибка при получении пользователей",
+      });
+    }
+  };
   
