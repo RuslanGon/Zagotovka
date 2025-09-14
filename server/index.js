@@ -15,8 +15,8 @@ app.use(cors())
 app.use(express.json())
 
 app.post("/auth/login", login);
-app.post('auth/register', register)
-app.get('auth/me',checkAuth, getMe)
+app.post("/auth/register", register);
+app.get("/auth/me", checkAuth, getMe);
 
 
 
